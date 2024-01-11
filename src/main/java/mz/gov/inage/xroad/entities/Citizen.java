@@ -1,23 +1,16 @@
 package mz.gov.inage.xroad.entities;
 
-import java.util.Date;
+import jakarta.persistence.Entity;
 
-public class Citizen {
-    private Long id;
+import java.util.Date;
+@Entity
+public class Citizen  extends AbstractEntity{
     private String firstName;
     private String lastName;
     private String sex;
     private Date dob;
     private String mothersName;
     private String fathersName;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -70,7 +63,6 @@ public class Citizen {
     @Override
     public String toString() {
         return "Citizen{" +
-                "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", sex='" + sex + '\'' +

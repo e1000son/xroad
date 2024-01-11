@@ -1,19 +1,13 @@
 package mz.gov.inage.xroad.entities;
 
-public class User {
-    private Long id;
+import jakarta.persistence.Entity;
+
+@Entity
+public class User extends AbstractEntity {
     private String firstName;
     private String lastName;
     private String email;
     private String password;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -50,7 +44,6 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
