@@ -1,12 +1,13 @@
-X-Road: A micro-service to be used for notification purpose
+X-Road: a simple app that simulates interoperability
 ============
-This service is used to provide other services with notifications (Email or SMS) and alerts features.
+This app simulates two firms interoperating. It is basically the backend, but with thymeleaf to be able to see the data flow.
 
 
 Requirements
 ============
-* Java >= 17 (OpenJDK JVM is tested by our CI on Travis)
+* Java >= 19 (OpenJDK JVM is tested by our CI on Travis)
 * MySql 8
+* Spring Boot
 
 You can run the required version of the database server in a container, instead of having to install it, like this:
 
