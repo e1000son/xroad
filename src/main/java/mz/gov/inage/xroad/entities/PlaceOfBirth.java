@@ -1,19 +1,13 @@
 package mz.gov.inage.xroad.entities;
 
-public class PlaceOfBirth {
-    private Long id;
+import jakarta.persistence.Entity;
+
+@Entity
+public class PlaceOfBirth extends AbstractEntity{
     private String province;
     private String district;
     private String village;
     private String description;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getProvince() {
         return province;
@@ -50,7 +44,6 @@ public class PlaceOfBirth {
     @Override
     public String toString() {
         return "PlaceOfBirth{" +
-                "id=" + id +
                 ", province='" + province + '\'' +
                 ", district='" + district + '\'' +
                 ", village='" + village + '\'' +

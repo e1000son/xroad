@@ -1,24 +1,22 @@
 package mz.gov.inage.xroad.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToOne;
+
 import java.sql.Timestamp;
 import java.util.Date;
-
-public class BirthCertificate {
-    private Long id;
+@Entity
+public class BirthCertificate extends AbstractEntity{
     private Date registerDate;
     private String state;
     private Float citizenKG;
     private String placeOfRegistration;
     private String address;
     private Timestamp registeredDate;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @OneToOne
+    private Citizen citizen;
+    @OneToOne
+    private PlaceOfBirth placeOfBirth;
 
     public Date getRegisterDate() {
         return registerDate;
@@ -71,7 +69,6 @@ public class BirthCertificate {
     @Override
     public String toString() {
         return "BirthCertificate{" +
-                "id=" + id +
                 ", registerDate=" + registerDate +
                 ", state='" + state + '\'' +
                 ", citizenKG=" + citizenKG +
