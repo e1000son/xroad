@@ -1,10 +1,13 @@
 package mz.gov.inage.xroad.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 
 @Entity
 public class User extends AbstractEntity {
+    @Column(name = "FIRST_NAME")
     private String firstName;
+    @Column(name = "LAST_NAME")
     private String lastName;
     private String email;
     private String password;
