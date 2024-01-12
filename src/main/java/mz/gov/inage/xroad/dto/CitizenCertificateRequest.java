@@ -1,24 +1,13 @@
-package mz.gov.inage.xroad.entities;
+package mz.gov.inage.xroad.dto;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
-
-import java.sql.Timestamp;
 import java.util.Date;
-@Entity
-@Table(name = "CITIZEN_BIRTH_CERTIFICATE")
-public class BirthCertificate extends AbstractEntity{
-    @Column(name = "FIRST_NAME")
+
+public class CitizenCertificateRequest {
     private String firstName;
-    @Column(name = "LAST_NAME")
     private String lastName;
     private String sex;
-    private Date dob;
-    @Column(name = "FATHERS_NAME")
+//    private Date dob;
     private String father;
-    @Column(name = "MOTHERS_NAME")
     private String mother;
     private String state;
     private Integer weight;
@@ -26,14 +15,6 @@ public class BirthCertificate extends AbstractEntity{
     private String district;
     private String village;
     private String descriptio;
-    @Column(name = "REGISTR_DATE")
-    private Timestamp registeredDate;
-
-//    @OneToOne
-//    private Citizen citizen;
-//    @OneToOne
-//    private PlaceOfBirth placeOfBirth;
-
 
     public String getFirstName() {
         return firstName;
@@ -59,13 +40,13 @@ public class BirthCertificate extends AbstractEntity{
         this.sex = sex;
     }
 
-    public Date getDob() {
-        return dob;
-    }
-
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
+//    public Date getDob() {
+//        return dob;
+//    }
+//
+//    public void setDob(Date dob) {
+//        this.dob = dob;
+//    }
 
     public String getFather() {
         return father;
@@ -131,21 +112,13 @@ public class BirthCertificate extends AbstractEntity{
         this.descriptio = descriptio;
     }
 
-    public Timestamp getRegisteredDate() {
-        return registeredDate;
-    }
-
-    public void setRegisteredDate(Timestamp registeredDate) {
-        this.registeredDate = registeredDate;
-    }
-
     @Override
     public String toString() {
-        return "BirthCertificate{" +
+        return "CitizenCertificateRequest{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", sex='" + sex + '\'' +
-                ", dob=" + dob +
+//                ", dob=" + dob +
                 ", father='" + father + '\'' +
                 ", mother='" + mother + '\'' +
                 ", state='" + state + '\'' +
@@ -154,7 +127,6 @@ public class BirthCertificate extends AbstractEntity{
                 ", district='" + district + '\'' +
                 ", village='" + village + '\'' +
                 ", descriptio='" + descriptio + '\'' +
-                ", registeredDate=" + registeredDate +
                 '}';
     }
 }
