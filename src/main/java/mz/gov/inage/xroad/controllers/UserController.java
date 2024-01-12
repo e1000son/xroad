@@ -36,7 +36,7 @@ public class UserController {
                         ModelMap modelMap){
         User user = userRepository.findByEmail(email);
         if (user.getPassword().equals(password))
-            return "/login/registerCitizen";
+            return "/citizen/registerCitizen";
         else
             modelMap.addAttribute("msg", "Nome de usuário ou password inválidos." +
                     "Por favor, tente novamente");
