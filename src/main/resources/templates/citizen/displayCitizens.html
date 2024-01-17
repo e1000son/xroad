@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Cidadãos</title>
+    </head>
+    <body>
+
+        <h2>Cidadãos</h2>
+        <table>
+            <tr><th>NUIC</th>
+                <th>Nome</th>
+                <th>Pai</th>
+                <th>Mãe</th>
+                <th>Província</th>
+
+            </tr>
+
+
+            <tr th:each="citizen:${citizens}">
+                <td th:text="${citizen.nuic}"></td>
+                <td th:text="${citizen.firstName}"></td>
+                <td th:text="${citizen.father}"></td>
+                <td th:text="${citizen.mother}"></td>
+                <td th:text="${citizen.province}"></td>
+<!--                <td><a th:href="@{'showCompleteReservation?flightId='+${flight.id}}">Seleccionar</a></td>-->
+            </tr>
+
+
+        </table>
+    </body>
+</html>
