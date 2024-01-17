@@ -2,7 +2,6 @@ package mz.gov.inage.xroad.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 import java.sql.Timestamp;
@@ -10,6 +9,8 @@ import java.util.Date;
 @Entity
 @Table(name = "CITIZEN_BIRTH_CERTIFICATE")
 public class BirthCertificate extends AbstractEntity{
+
+    private String nuic;
     @Column(name = "FIRST_NAME")
     private String firstName;
     @Column(name = "LAST_NAME")
@@ -34,6 +35,12 @@ public class BirthCertificate extends AbstractEntity{
 //    @OneToOne
 //    private PlaceOfBirth placeOfBirth;
 
+    public String getNuic() {
+        return nuic;
+    }
+    public void setNuic(String nuic) {
+        this.nuic = nuic;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -142,7 +149,8 @@ public class BirthCertificate extends AbstractEntity{
     @Override
     public String toString() {
         return "BirthCertificate{" +
-                "firstName='" + firstName + '\'' +
+                "nuic='" + nuic + '\'' +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", sex='" + sex + '\'' +
                 ", dob=" + dob +

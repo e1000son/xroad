@@ -17,7 +17,7 @@ public class CitizenCertificateController {
     public String saveCitizenCertificate(CitizenCertificateRequest request, ModelMap modelMap){
         BirthCertificate birthCertificate = citizenCertificateService.saveBirthCertificate(request);
         modelMap.addAttribute("msg", "Certidão de nascimento criada com sucesso. " +
-                "ID = " + birthCertificate.getId());
+                "ID = " + birthCertificate.getId() + ". NUIC = " + birthCertificate.getNuic());
         return "/citizen/certificateConfirmation";
     }
 }

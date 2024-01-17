@@ -16,6 +16,7 @@ public class CitizenCertificateServiceImpl implements ICitizenCertificateService
     public BirthCertificate saveBirthCertificate(CitizenCertificateRequest citizenRequest) {
 
         BirthCertificate birthCertificate = new BirthCertificate();
+        birthCertificate.setNuic(citizenRequest.getNuic());
         birthCertificate.setFirstName(citizenRequest.getFirstName());
         birthCertificate.setLastName(citizenRequest.getLastName());
         birthCertificate.setSex(citizenRequest.getSex());

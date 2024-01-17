@@ -1,8 +1,8 @@
 package mz.gov.inage.xroad.dto;
 
-import java.util.Date;
 
 public class CitizenCertificateRequest {
+    private String nuic;
     private String firstName;
     private String lastName;
     private String sex;
@@ -15,6 +15,14 @@ public class CitizenCertificateRequest {
     private String district;
     private String village;
     private String descriptio;
+
+    public String getNuic() {
+        return nuic;
+    }
+
+    public void setNuic(String nuic) {
+        this.nuic = nuic;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -115,10 +123,10 @@ public class CitizenCertificateRequest {
     @Override
     public String toString() {
         return "CitizenCertificateRequest{" +
-                "firstName='" + firstName + '\'' +
+                "NUIC='" + nuic + '\'' +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", sex='" + sex + '\'' +
-//                ", dob=" + dob +
                 ", father='" + father + '\'' +
                 ", mother='" + mother + '\'' +
                 ", state='" + state + '\'' +
